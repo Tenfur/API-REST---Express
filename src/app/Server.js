@@ -6,6 +6,7 @@ import syncConnection from "../config/database/SyncConnection.js";
 
 // Routes
 import UserRouter from "../routes/UserRouter.js";
+import AuthRouter from "../routes/AuthRouter.js";
 
 dotenv.config()
 
@@ -24,6 +25,7 @@ class Server{
     }
     routes(){
          this.app.use("/users", UserRouter)
+         this.app.use("/auth", AuthRouter)
     }
     async databaseConnection(){
         try{

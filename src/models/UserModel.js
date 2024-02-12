@@ -6,6 +6,13 @@ const UserModel = sequelize.define("User", {
     age: DataTypes.INTEGER,
     email: DataTypes.TEXT,
     password: DataTypes.TEXT,
+    validation: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
+    },
+    validation_token: {
+        type: DataTypes.TEXT
+    }
     },
     {
         schema: 'Test',
